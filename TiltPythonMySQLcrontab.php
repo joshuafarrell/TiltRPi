@@ -3,14 +3,14 @@
 //Reduce errors
 error_reporting(~E_WARNING);
 
-$tiltStr = "XX:XX:XX:XX:XX:XX"; // put your tilt MAC address here
-$htmlAddrStr = "/var/www/html";
+$tiltStr = "04:a3:16:9b:11:cb"; // put your tilt MAC address here
+$htmlAddrStr = "/var/www/html/TiltRPi";
 $escapShellCmdStr = "sudo python $htmlAddrStr/tiltblescan.py";
 
 // Connect to the database
 $servername = "localhost";
 $username   = "tilt";
-$password   = "tilt";
+$password   = "aa984048";
 $database   = "tilt";
 
 $link = mysqli_connect($servername,$username,$password,$database);
@@ -63,7 +63,7 @@ foreach($tiltArray as $value)
   $abvStr = round($abvStr, 2);
   echo "\$sgStr = $sgStr, \$tempStr = $tempStr, \$abvStr=$abvStr \n";
 
-  $bmStr = "name - Red, MAC = $tiltStr, Time - $now - $dateStr, SG - $sgStr, Temp - $tempStr, degrees, ABV - $abvStr percent\n"; 
+  $bmStr = "name - Blue, MAC = $tiltStr, Time - $now - $dateStr, SG - $sgStr, Temp - $tempStr, degrees, ABV - $abvStr percent\n"; 
   fwrite ($bmFile, $bmStr);
   if($tempStr > 0)
   {

@@ -7,9 +7,9 @@
 
 	// Connect to the database
 	$servername = "localhost";
-	$username   = "brewometer";
-	$password   = "brewometer";
-	$database   = "brewometer";
+	$username   = "tilt";
+	$password   = "aa984048";
+	$database   = "tilt";
 
 	$link = mysqli_connect($servername,$username,$password,$database);
 	if (!$link)
