@@ -10,7 +10,7 @@ $escapShellCmdStr = "sudo python $htmlAddrStr/tiltblescan.py";
 // Connect to the database
 $servername = "localhost";
 $username   = "tilt";
-$password   = "aa984048";
+$password   = "tilt";
 $database   = "tilt";
 
 $link = mysqli_connect($servername,$username,$password,$database);
@@ -67,7 +67,7 @@ foreach($tiltArray as $value)
   fwrite ($bmFile, $bmStr);
   if($tempStr > 0)
   {
-    $sql= "INSERT INTO `device`(`name`,`mac`,`time`, `sg`, `temp`, `abv`) VALUES('Red','$tiltStr','$now','$sgStr','$tempStr','$abvStr')";
+    $sql= "INSERT INTO `device`(`name`,`mac`,`time`, `sg`, `temp`, `abv`) VALUES('Blue','$tiltStr','$now','$sgStr','$tempStr','$abvStr')";
     if (!mysqli_query($link, $sql))
     {
       $bmErrStr= "Error: " . $sql . "<br>" . mysqli_error($link);

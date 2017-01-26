@@ -8,7 +8,7 @@
 	// Connect to the database
 	$servername = "localhost";
 	$username   = "tilt";
-	$password   = "aa984048";
+	$password   = "tilt";
 	$database   = "tilt";
 
 	$link = mysqli_connect($servername,$username,$password,$database);
@@ -210,13 +210,13 @@
   $pSG->set("terminal png size 1280,480"); 
   $pSG->plotData( $sgData, 'lines', $tickMark,'','ls 1');
   $pSG->setRange('y', $sgMin-0.002, $sgMax+0.002); 
-  $pSG->export('/var/www/images/pSG.png');
+  $pSG->export('/var/www/html/TiltRPi/images/pSG.png');
   $pSG->close();
 
   $pTemp->set("terminal png size 1280,480"); 
   $pTemp->plotData( $tempData, 'lines', $tickMark,'','ls 1'); 
   $pTemp->setRange('y', $tempMin-1, $tempMax+1); 
-  $pTemp->export('/var/www/images/pTemp.png');
+  $pTemp->export('/var/www/html/TiltRPi/images/pTemp.png');
   $pTemp->close();
  
 
@@ -415,12 +415,12 @@ input:focus, textarea:focus{background-color: lightgrey;}
       </tr>
       <tr>
         <td colspan="2" >
-          <img src="/images/pSG.png">
+          <img src="/TiltRPi/images/pSG.png">
         </td>
       </tr>
       <tr>
         <td colspan="2" >
-          <img src="/images/pTemp.png">
+          <img src="/TiltRPi/images/pTemp.png">
         </td>
       </tr>
       <tr>
